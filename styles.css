@@ -128,6 +128,11 @@ table {
   border-spacing: 0;
 }
 /*Start*/
+
+@font-face {
+  font-family: norseBold;
+  src: url(./Norse-Bold.otf);
+}
 :root {
   width: 100%;
   height: 100%;
@@ -151,29 +156,45 @@ main {
 }
 
 .formPage {
-  width: 70%;
   background-color: snow;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.text {
+  padding: 0px 2rem;
+  width: 80%;
+}
+
+.text p {
+  margin-bottom: 20px;
+}
+
+.bottom {
+  padding: 0px 2rem;
+  margin-top: 2rem;
+}
+
+form {
+  margin-top: 2.5rem;
+}
+
 form .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background-color: white;
-  padding: 14px 16px;
+  box-shadow: 0px 2px 4px 1px rgb(218, 218, 218);
+  padding: 1rem 2rem;
 }
 
 .form .row {
   display: flex;
   flex-direction: row;
+  margin-top: 1rem;
 }
 
 button {
   padding: 6px 25px;
-  background-color: rgba(34, 156, 30, 0.63);
+  background-color: rgba(31, 136, 28, 0.829);
   color: white;
   border: none;
   border-radius: 6px;
@@ -202,24 +223,54 @@ form input {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.39);
   padding: 14px 0px;
+  font-family: norseBold;
+  font-size: 4rem;
+  margin-top: 9rem;
 }
 
 #logo {
-  height: 50px;
+  height: 5rem;
 }
 
 .credit,
 .credit a {
-  color: white;
+  color: rgba(255, 255, 255, 0.795);
 }
 
 .credit {
   position: relative;
-  top: 85%;
+  top: 55%;
+  font-size: smaller;
 }
 
-.formPage > span,
-.formPage > p,
+.text > span,
+.text > p,
 .form > span {
   font-weight: bold;
+}
+
+.row .input:last-child {
+  margin-left: 3rem;
+}
+
+.form label {
+  font-size: smaller;
+  color: rgb(77, 77, 77);
+}
+
+.logIn {
+  margin-top: 1rem;
+}
+
+.logInBtn {
+  color: rgba(31, 136, 28, 0.829);
+  font-weight: 550;
+}
+
+.logInBtn:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
 }
