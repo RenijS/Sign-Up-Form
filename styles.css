@@ -204,12 +204,13 @@ button {
 .input {
   display: flex;
   flex-direction: column;
+  width: 30%;
 }
 
 form input {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
-  padding: 4px;
+  padding: 6px;
 }
 
 #odin {
@@ -273,4 +274,37 @@ form input {
 
 button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .form .row {
+    flex-direction: column;
+  }
+
+  .input {
+    width: 90%;
+  }
+
+  .row .input:last-child {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .front {
+    width: 100%;
+    height: 26%;
+    font-size: x-small;
+    margin-bottom: 15px;
+  }
+  .title {
+    margin-top: 3rem;
+  }
+
+  .credit {
+    top: 25%;
+  }
 }
