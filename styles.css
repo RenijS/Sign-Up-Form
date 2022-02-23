@@ -192,7 +192,7 @@ form .form {
   margin-top: 1rem;
 }
 
-button {
+button[type="submit"] {
   padding: 6px 25px;
   background-color: rgba(31, 136, 28, 0.829);
   color: white;
@@ -211,6 +211,22 @@ form input {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
   padding: 6px;
+}
+
+input:focus {
+  border: none;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+  outline: none;
+}
+
+input:invalid:focus {
+  --invalid-color: red;
+  border: 2px solid var(--invalid-color);
+}
+
+input:valid:focus {
+  --valid-color: blue;
+  border: 2px solid var(--valid-color);
 }
 
 #odin {
@@ -268,12 +284,16 @@ form input {
   font-weight: 550;
 }
 
-.logInBtn:hover {
+.logInBtn:hover,
+button:hover {
   cursor: pointer;
 }
 
-button:hover {
-  cursor: pointer;
+.error {
+  --error-text: red;
+
+  color: var(--error-text);
+  font-size: x-small;
 }
 
 @media (max-width: 600px) {

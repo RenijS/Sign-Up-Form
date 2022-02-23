@@ -43,20 +43,30 @@
               <div class="input">
                 <label for="firstName">First Name</label>
                 <input type="text" name="firstName" id="firstName" required />
+                <div class="error" id="firstNameError"></div>
               </div>
               <div class="input">
                 <label for="lastName">Last Name</label>
                 <input type="text" name="lastName" id="lastName" required />
+                <div class="error" id="lastNameError"></div>
               </div>
             </div>
             <div class="row">
               <div class="input">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required />
+                <div class="error" id="emailError"></div>
               </div>
               <div class="input">
                 <label for="number">Phone Number</label>
-                <input type="tel" name="number" id="number" required />
+                <input
+                  type="tel"
+                  name="number"
+                  id="number"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <div class="error" id="numError"></div>
               </div>
             </div>
             <div class="row">
@@ -64,19 +74,28 @@
                 <label for="password">Password</label>
                 <input
                   type="password"
-                  name="firstName"
-                  id="firstName"
+                  name="password"
+                  id="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   required
                 />
+                <div class="error" id="passError"></div>
               </div>
               <div class="input">
                 <label for="confirm">Confirm Password</label>
-                <input type="password" name="confirm" id="confirm" required />
+                <input
+                  type="password"
+                  name="confirm"
+                  id="confirm"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required
+                />
+                <div class="error" id="confirmError"></div>
               </div>
             </div>
           </div>
           <div class="bottom">
-            <button type="submit">Create Account</button>
+            <button type="submit" class="submitBtn">Create Account</button>
             <div class="logIn">
               <span
                 >Already have an account?
